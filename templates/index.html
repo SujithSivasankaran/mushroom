@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Marketing dataset</title>
+    <style>
+        div{float:left;
+            padding:20px;
+            border:2px solid black;
+            margin:10px;
+        }
+
+        .center{
+            display:block;
+            margin-left:auto;
+            marin-right:auto;
+        }
+
+        input{
+        display:block;
+        margin-left:auto;
+        margin-right:auto;}
+
+
+
+    </style>
+</head>
+<body>
+<center><h1>MUSHROOM CLASSIFICATION</h1></center>
+
+<form action="{{url_for('predict')}}" method="POST">
+<!--    1-->
+    <datalist id="cap-shape">
+        <option value="b">
+        <option value="c">
+        <option value="x">
+        <option value="f">
+    </datalist>
+<!--    2-->
+    <datalist id="cap-surface">
+        <option value="f">
+        <option value="g">
+        <option value="y">
+        <option value="s">
+    </datalist>
+<!--    3-->
+    <datalist id="cap-color">
+        <option value="n">
+        <option value="b">
+        <option value="c">
+        <option value="g">
+        <option value="r">
+        <option value="p">
+        <option value="u">
+        <option value="e">
+        <option value="w">
+        <option value="y">
+    </datalist>
+<!--    4-->
+    <datalist id="bruises">
+        <option value="t">
+        <option value="f">
+    </datalist>
+<!--    5-->
+    <datalist id="odor">
+        <option value="a">
+        <option value="l">
+        <option value="c">
+        <option value="y">
+        <option value="f">
+        <option value="m">
+        <option value="n">
+        <option value="p">
+        <option value="s">
+    </datalist>
+<!--    6-->
+    <datalist id="gill-attachment">
+        <option value="a">
+        <option value="d">
+        <option value="f">
+        <option value="n">
+    </datalist>
+<!--    7-->
+    <datalist id="gill-spacing">
+        <option value="c">
+        <option value="w">
+        <option value="d">
+    </datalist>
+<!--    8-->
+    <datalist id="gill-size">
+        <option value="b">
+        <option value="n">
+    </datalist>
+<!--    9-->
+    <datalist id="grill-color">
+        <option value="k">
+        <option value="n">
+        <option value="b">
+        <option value="h">
+        <option value="g">
+        <option value="r">
+        <option value="o">
+        <option value="p">
+        <option value="u">
+        <option value="e">
+        <option value="w">
+        <option value="y">
+    </datalist>
+<!--    10-->
+    <datalist id="stalk-shape">
+        <option value="t">
+        <option value="e">
+    </datalist>
+<!--    11-->
+    <datalist id="stalk-root">
+        <option value="b">
+        <option value="e">
+        <option value="c">
+        <option value="r">
+    </datalist>
+<!--    12-->
+    <datalist id="stalk-surface-above-ring">
+        <option value="s">
+        <option value="k">
+        <option value="f">
+        <option value="y">
+    </datalist>
+<!--    13-->
+    <datalist id="stalk-surface-below-ring">
+        <option value="s">
+        <option value="k">
+        <option value="f">
+        <option value="y">
+    </datalist>
+<!--    14-->
+    <datalist id="stalk-color-below-ring">
+        <option value="w">
+        <option value="p">
+        <option value="g">
+        <option value="n">
+    </datalist>
+<!--    15-->
+    <datalist id="stalk-color-above-ring">
+        <option value="w">
+        <option value="p">
+        <option value="g">
+        <option value="n">
+    </datalist>
+<!--    16-->
+    <datalist id="veil-type">
+        <option value="p">
+    </datalist>
+<!--    17-->
+    <datalist id="veil-color">
+        <option value="w">
+        <option value="n">
+        <option value="o">
+        <option value="y">
+    </datalist>
+<!--    18-->
+    <datalist id="ring-number">
+        <option value="o">
+        <option value="t">
+        <option value="n">
+    </datalist>
+<!--    19-->
+    <datalist id="ring-type">
+        <option value="p">
+        <option value="e">
+        <option value="l">
+        <option value="f">
+        <option value="n">
+    </datalist>
+<!--    20-->
+    <datalist id="spore-print-color">
+        <option value="w">
+        <option value="n">
+        <option value="k">
+        <option value="h">
+        <option value="r">
+    </datalist>
+<!--    21-->
+    <datalist id="population">
+        <option value="v">
+        <option value="y">
+        <option value="s">
+        <option value="n">
+        <option value="a">
+    </datalist>
+<!--    22-->
+    <datalist id="habitat">
+        <option value="d">
+        <option value="g">
+        <option value="p">
+        <option value="l">
+        <option value="u">
+    </datalist>
+    <div>
+    <div>
+    <h2>cap-shape</h2>
+    <input list="cap-shape" name="cap_shape">
+    </div>
+    <div>
+    <h2>cap-surface</h2>
+    <input list="cap-surface" name="cap_surface">
+    </div>
+    <div>
+    <h2>cap-color</h2>
+    <input list="cap-color" name="cap_color">
+    </div>
+    <div>
+    <h2>bruises</h2>
+    <input list="bruises" name="bruises">
+    </div>
+    <div>
+    <h2>odorS</h2>
+    <input list="odor" name="odor">
+    </div>
+    <div>
+    <h2>gill-attachment</h2>
+    <input list="gill-attachment" name="gill_attachment">
+    </div>
+    <div>
+    <h2>gill-spacing</h2>
+    <input list="gill-spacing" name="gill_spacing">
+    </div>
+    <div>
+    <h2>gill-size</h2>
+    <input list="gill-size" name="gill_size">
+    </div>
+    <div>
+    <h2>grill-color</h2>
+    <input list="grill-color" name="grill_color">
+    </div>
+    <div>
+    <h2>stalk-shape</h2>
+    <input list="stalk-shape" name="stalk_shape">
+    </div>
+    <div>
+    <h2>stalk-root</h2>
+    <input list="stalk-root" name="stalk_root">
+    </div>
+    <div>
+    <h2>stalk-surface-above-ring</h2>
+    <input list="stalk-surface-above-ring" name="stalk_surface_above_ring">
+    </div>
+    <div>
+    <h2>stalk-surface-below-ring</h2>
+    <input list="stalk-surface-below-ring" name="stalk_surface_below_ring">
+    </div>
+    <div>
+    <h2>stalk-color-below-ring</h2>
+    <input list="stalk-color-below-ring" name="stalk_color_below_ring">
+    </div>
+    <div>
+    <h2>stalk-color-above-ring</h2>
+    <input list="stalk-color-above-ring" name="stalk_color_above_ring">
+    </div>
+    <div>
+    <h2>veil-type</h2>
+    <input list="veil-type" name="veil_type">
+    </div>
+    <div>
+    <h2>veil-color</h2>
+    <input list="veil-color" name="veil_color">
+    </div>
+    <div>
+    <h2>ring-number</h2>
+    <input list="ring-number" name="ring_number">
+    </div>
+    <div>
+    <h2>ring-type</h2>
+    <input list="ring-type" name="ring_type">
+    </div>
+    <div>
+    <h2>spore-print-color</h2>
+    <input list="spore-print-color" name="spore_print_color">
+    </div>
+    <div>
+    <h2>population</h2>
+    <input list="population" name="population">
+    </div>
+    <div>
+    <h2>habitat</h2>
+    <input list="habitat" name="habitat">
+    </div>
+    </div>
+    <button class="res_bt" type="submit"  style="display:block;margin-left:auto;margin-right:auto;padding:10px;">RESULT</button>
+</form>
+<!--<button class="res_bt center" type="submit" >RESULT</button>-->
+
+
+{% if  output %}
+
+    <h1 style="text-align:center;">The mushroom is {{output}}</h1>
+{% endif %}
+
+
+</body>
+</html>
